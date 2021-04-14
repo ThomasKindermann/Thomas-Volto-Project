@@ -158,8 +158,8 @@ pipeline {
       }
     }
 
-    // --- DEPLOYMENT TO thomas-volto-project ---
-    stage('Deployment to thomas-volto-project') {
+    // --- DEPLOYMENT TO tvproject ---
+    stage('Deployment to tvproject') {
       parallel {
         stage('Backend') {
           agent {
@@ -169,10 +169,10 @@ pipeline {
             branch 'main'
           }
           steps {
-            sh '(cd /srv/thomas-volto-project && git fetch --all && git reset --hard origin/main)'
-            sh '(cd /srv/thomas-volto-project/api && pm2 stop thomas-volto-project-api-dev)'
-            sh '(cd /srv/thomas-volto-project/api && bin/buildout -c dev.cfg)'
-            sh '(cd /srv/thomas-volto-project/api && pm2 start thomas-volto-project-api-dev)'
+            sh '(cd /srv/tvproject && git fetch --all && git reset --hard origin/main)'
+            sh '(cd /srv/tvproject/api && pm2 stop tvproject-api-dev)'
+            sh '(cd /srv/tvproject/api && bin/buildout -c dev.cfg)'
+            sh '(cd /srv/tvproject/api && pm2 start tvproject-api-dev)'
           }
         }
         stage('Frontend') {
@@ -185,9 +185,9 @@ pipeline {
           steps {
             deleteDir()
             checkout scm
-            sh '(cd /srv/thomas-volto-project && yarn install)'
-            sh '(cd /srv/thomas-volto-project && PORT=MODIFYME RAZZLE_API_PATH=https://thomas-volto-project/api yarn build)'
-            sh '(cd /srv/thomas-volto-project && pm2 restart thomas-volto-project-volto-dev)'
+            sh '(cd /srv/tvproject && yarn install)'
+            sh '(cd /srv/tvproject && PORT=MODIFYME RAZZLE_API_PATH=https://tvproject/api yarn build)'
+            sh '(cd /srv/tvproject && pm2 restart tvproject-volto-dev)'
           }
         }
       }

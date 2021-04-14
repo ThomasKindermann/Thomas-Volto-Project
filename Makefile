@@ -114,7 +114,7 @@ start-backend: ## Start Plone Backend
 .PHONY: test-acceptance-start-backend
 test-acceptance-start-backend: ## Start Test Plone Backend
 	@echo "$(GREEN)==> Start Test Plone Backend$(RESET)"
-	ZSERVER_PORT=55001 CONFIGURE_PACKAGES=plone.app.contenttypes,plone.app.multilingual,plone.restapi,kitconcept.volto,kitconcept.volto.cors,thomas-volto-project.core APPLY_PROFILES=plone.app.contenttypes:plone-content,plone.restapi:default,plone.app.multilingual:default,kitconcept.volto:default,thomas-volto-project.core:testing ./api/bin/robot-server plone.app.robotframework.testing.PLONE_ROBOT_TESTING
+	ZSERVER_PORT=55001 CONFIGURE_PACKAGES=plone.app.contenttypes,plone.app.multilingual,plone.restapi,kitconcept.volto,kitconcept.volto.cors,tvproject.core APPLY_PROFILES=plone.app.contenttypes:plone-content,plone.restapi:default,plone.app.multilingual:default,kitconcept.volto:default,tvproject.core:testing ./api/bin/robot-server plone.app.robotframework.testing.PLONE_ROBOT_TESTING
 
 .PHONY: test-acceptance-start-frontend
 test-acceptance-start-frontend: ## Start Test Volto Frontend
@@ -129,7 +129,7 @@ test-acceptance-start-tests: ## Start Test
 .PHONY: start-test-backend
 start-test-backend: ## Start Plone Test Backend
 	@echo "$(GREEN)==> Start Plone Test Backend$(RESET)"
-	ZSERVER_PORT=55001 CONFIGURE_PACKAGES=plone.app.contenttypes,plone.app.multilingual,plone.restapi,kitconcept.volto,kitconcept.volto.cors,thomas-volto-project.core APPLY_PROFILES=plone.app.contenttypes:plone-content,plone.restapi:default,plone.app.multilingual:default,kitconcept.volto:default,fftitz.core:testing ./api/bin/robot-server plone.app.robotframework.testing.PLONE_ROBOT_TESTING
+	ZSERVER_PORT=55001 CONFIGURE_PACKAGES=plone.app.contenttypes,plone.app.multilingual,plone.restapi,kitconcept.volto,kitconcept.volto.cors,tvproject.core APPLY_PROFILES=plone.app.contenttypes:plone-content,plone.restapi:default,plone.app.multilingual:default,kitconcept.volto:default,fftitz.core:testing ./api/bin/robot-server plone.app.robotframework.testing.PLONE_ROBOT_TESTING
 
 .PHONY: start-test-frontend
 start-test-frontend: ## Start Volto Test Frontend

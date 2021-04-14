@@ -1,4 +1,0 @@
-graft src/thomas-volto-project
-graft docs
-include *.rst
-global-exclude *.pyc

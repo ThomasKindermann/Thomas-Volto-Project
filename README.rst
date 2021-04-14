@@ -3,7 +3,7 @@
    This text does not appear on pypi or github. It is a comment.
 
 ==============================================================================
-Thomas-volto-project
+thomas-volto-project
 ==============================================================================
 
 .. image:: https://kitconcept.com/logo.svg
@@ -52,8 +52,8 @@ then for start the watcher::
 Code
 ----
 
-Code Repository: https://github.com/kitconcept/thomas-volto-project
-Continous Integration: https://jenkins.kitconcept.io/job/kitconcept/job/thomas-volto-project/
+Code Repository: https://github.com/kitconcept/thomas.volto.project
+Continous Integration: https://jenkins.kitconcept.io/job/kitconcept/job/thomas.volto.project/
 
 
 Project Management
@@ -67,5 +67,5 @@ Server
 ------
 
 Live: www.example.com
-Staging: thomas-volto-project.kitconcept.io (Deploy automatically from main branch)
+Staging: thomas.volto.project.kitconcept.io (Deploy automatically from main branch)
 
