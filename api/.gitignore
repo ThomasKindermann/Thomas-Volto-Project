@@ -8,7 +8,6 @@
 .Python
 # dirs
 bin/
-build
 buildout-cache/
 develop-eggs/
 eggs/
@@ -20,7 +19,7 @@ parts/
 test.plone_addon/
 var/
 node_modules/
-omelette
+omelette/
 # files
 .installed.cfg
 .mr.developer.cfg

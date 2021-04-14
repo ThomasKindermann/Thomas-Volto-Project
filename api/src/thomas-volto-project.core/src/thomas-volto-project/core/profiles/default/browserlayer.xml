@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer name="thomas-volto-project.core" interface="thomas-volto-project.core.interfaces.IThomas-volto-projectcoreLayer" />
+</layers>
